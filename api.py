@@ -1,9 +1,11 @@
 from flask import Flask, request  # Flask package for web service
+from flask_cors import CORS
 from flask.json import jsonify
 
 from find_pivot import find_pivot  # The algorithm function
 
 app = Flask(__name__)  # Flask object
+CORS(app)
 
 
 @app.route('/api/check-array', methods=['POST'])
