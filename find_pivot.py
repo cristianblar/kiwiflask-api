@@ -1,6 +1,6 @@
 def find_pivot(array):
     # array must have at least 3 elements:
-    if len(array) < 3:
+    if len(array) < 3 or type(array) != list:
         return -1
 
     # array must have only positive integers:
